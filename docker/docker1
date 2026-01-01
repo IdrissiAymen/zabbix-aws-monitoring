@@ -1,1 +1,19 @@
+# Base Zabbix Server image
+FROM zabbix/zabbix-server-mysql:ubuntu-6.0-latest
+
+# Environment variables for DB
+ENV DB_SERVER_HOST=localhost
+ENV MYSQL_USER=zabbix
+ENV MYSQL_PASSWORD=zabbixpass
+ENV MYSQL_DATABASE=zabbix
+
+# Copy scripts
+COPY scripts/ /scripts/
+RUN chmod +x /scripts/*.sh
+
+# Expose default Zabbix server port
+EXPOSE 10051
+
+# Start Zabbix server
+CMD ["zabbix_server", "-f"]
 
