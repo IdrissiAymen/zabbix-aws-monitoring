@@ -2,6 +2,8 @@
 # Mise en œuvre d’une infrastructure cloud de supervision centralisée sous AWS
 
 ## Déploiement de Zabbix conteneurisé pour le monitoring d’un parc hybride (Linux & Windows)
+[zabbix-project-khiat.pdf](https://github.com/user-attachments/files/24410790/zabbix-project-khiat.pdf)
+
 
 ---
 
